@@ -40,39 +40,126 @@ public class CreateJPanel extends javax.swing.JPanel {
         emailID = new javax.swing.JLabel();
         employeeID = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
-        txtEmailID = new javax.swing.JTextField();
-        txtEID = new javax.swing.JTextField();
         saveBtn = new javax.swing.JButton();
-        txtName1 = new javax.swing.JTextField();
+        jSpinner1 = new javax.swing.JSpinner();
+        txtEID1 = new javax.swing.JTextField();
+        age1 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        employeeID1 = new javax.swing.JLabel();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        employeeID2 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        txtEID2 = new javax.swing.JTextField();
+        txtEID3 = new javax.swing.JTextField();
+        emailID1 = new javax.swing.JLabel();
+        name1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        txtEmailID = new javax.swing.JLabel();
+        txtEID4 = new javax.swing.JTextField();
+        emailID3 = new javax.swing.JLabel();
+        txtEID5 = new javax.swing.JTextField();
+
+        setPreferredSize(new java.awt.Dimension(912, 463));
 
         title.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title.setText("Create Employee");
 
+        name.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         name.setText("Name:");
 
+        age.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         age.setText("Age:");
 
-        emailID.setText("Email ID:");
+        emailID.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        emailID.setText("Employee ID:");
 
-        employeeID.setText("Employee ID:");
+        employeeID.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        employeeID.setText("Team Info:");
 
-        txtEmailID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEmailIDActionPerformed(evt);
-            }
-        });
-
-        txtEID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEIDActionPerformed(evt);
-            }
-        });
-
+        saveBtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         saveBtn.setText("Save");
         saveBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveBtnActionPerformed(evt);
+            }
+        });
+
+        txtEID1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEID1ActionPerformed(evt);
+            }
+        });
+
+        age1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        age1.setText("Gender:");
+
+        jRadioButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jRadioButton1.setText("Male");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        jRadioButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jRadioButton2.setText("Female");
+
+        jRadioButton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jRadioButton3.setText("Other");
+
+        employeeID1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        employeeID1.setText("Start Date:");
+
+        employeeID2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        employeeID2.setText("Level:");
+
+        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        txtEID2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEID2ActionPerformed(evt);
+            }
+        });
+
+        txtEID3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEID3ActionPerformed(evt);
+            }
+        });
+
+        emailID1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        emailID1.setText("Position Title:");
+
+        name1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        name1.setText("Upload Photo:");
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton1.setText("Select file");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        txtEmailID.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtEmailID.setText("Email ID:");
+
+        txtEID4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEID4ActionPerformed(evt);
+            }
+        });
+
+        emailID3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        emailID3.setText("Phone:");
+
+        txtEID5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEID5ActionPerformed(evt);
             }
         });
 
@@ -81,25 +168,77 @@ public class CreateJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 301, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(name)
-                            .addComponent(age)
-                            .addComponent(emailID)
-                            .addComponent(employeeID))
-                        .addGap(31, 31, 31)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(saveBtn)
-                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtEmailID, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtEID, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtName1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 319, Short.MAX_VALUE)))
-                .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(116, 116, 116)
+                        .addComponent(age)
+                        .addGap(18, 18, 18)
+                        .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(98, 98, 98)
+                        .addComponent(age1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton1)
+                        .addGap(12, 12, 12)
+                        .addComponent(jRadioButton2)
+                        .addGap(12, 12, 12)
+                        .addComponent(jRadioButton3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(81, 81, 81)
+                        .addComponent(employeeID1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(111, 111, 111)
+                        .addComponent(employeeID2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(79, 79, 79)
+                        .addComponent(employeeID)
+                        .addGap(6, 6, 6)
+                        .addComponent(txtEID2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(emailID3)
+                            .addGap(18, 18, 18)
+                            .addComponent(txtEID5, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(103, 103, 103)
+                                    .addComponent(name)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addGap(61, 61, 61)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(emailID)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(txtEID1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(emailID1)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(txtEID3, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(76, 76, 76)
+                                    .addComponent(name1)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jButton1))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(109, 109, 109)
+                                    .addComponent(txtEmailID)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(txtEID4, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(saveBtn)
+                .addGap(385, 385, 385))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,34 +246,55 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addGap(24, 24, 24)
                 .addComponent(title)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(name)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(name1)
+                        .addComponent(jButton1)))
+                .addGap(19, 19, 19)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(emailID)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtEID1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtEmailID)
+                        .addComponent(txtEID4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(emailID1)
+                    .addComponent(txtEID3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(emailID3)
+                        .addComponent(txtEID5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(age)
-                    .addComponent(txtName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtEmailID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(emailID))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtEID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(employeeID))
-                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(age1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton1)
+                            .addComponent(jRadioButton2)
+                            .addComponent(jRadioButton3))))
+                .addGap(14, 14, 14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(employeeID1)
+                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(employeeID2)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(employeeID)
+                    .addComponent(txtEID2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
                 .addComponent(saveBtn)
-                .addContainerGap(206, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtEmailIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtEmailIDActionPerformed
-
-    private void txtEIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtEIDActionPerformed
 
     private void saveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveBtnActionPerformed
         // TODO add your handling code here:
@@ -145,17 +305,61 @@ public class CreateJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_saveBtnActionPerformed
 
+    private void txtEID1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEID1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEID1ActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void txtEID2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEID2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEID2ActionPerformed
+
+    private void txtEID3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEID3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEID3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtEID4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEID4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEID4ActionPerformed
+
+    private void txtEID5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEID5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEID5ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel age;
+    private javax.swing.JLabel age1;
     private javax.swing.JLabel emailID;
+    private javax.swing.JLabel emailID1;
+    private javax.swing.JLabel emailID3;
     private javax.swing.JLabel employeeID;
+    private javax.swing.JLabel employeeID1;
+    private javax.swing.JLabel employeeID2;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    public javax.swing.JSpinner jSpinner1;
     private javax.swing.JLabel name;
+    private javax.swing.JLabel name1;
     private javax.swing.JButton saveBtn;
     private javax.swing.JLabel title;
-    private javax.swing.JTextField txtEID;
-    private javax.swing.JTextField txtEmailID;
+    private javax.swing.JTextField txtEID1;
+    private javax.swing.JTextField txtEID2;
+    private javax.swing.JTextField txtEID3;
+    private javax.swing.JTextField txtEID4;
+    private javax.swing.JTextField txtEID5;
+    private javax.swing.JLabel txtEmailID;
     private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtName1;
     // End of variables declaration//GEN-END:variables
 }
