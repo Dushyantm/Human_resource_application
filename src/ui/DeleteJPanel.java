@@ -5,6 +5,7 @@
 package ui;
 
 import model.Employee;
+import model.employeeHistory;
 
 /**
  *
@@ -15,11 +16,11 @@ public class DeleteJPanel extends javax.swing.JPanel {
     /**
      * Creates new form DeleteJPanel
      */
-    Employee employee;
+    employeeHistory history;
     
-    public DeleteJPanel(Employee employee) {
+    public DeleteJPanel(employeeHistory history) {
         initComponents();
-        this.employee = employee;
+        this.history = history;
     }
 
     /**

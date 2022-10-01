@@ -49,23 +49,79 @@ public class Employee {
     public void setEmailID(String emailID) {
         this.emailID = emailID;
     }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+    }
+
+    public String getTeamInfo() {
+        return teamInfo;
+    }
+
+    public void setTeamInfo(String teamInfo) {
+        this.teamInfo = teamInfo;
+    }
+
+    public String getPositionTitle() {
+        return positionTitle;
+    }
+
+    public void setPositionTitle(String positionTitle) {
+        this.positionTitle = positionTitle;
+    }
+
+    public String getPhotoPath() {
+        return photoPath;
+    }
+
+    public void setPhotoPath(String photoPath) {
+        this.photoPath = photoPath;
+    }
+    
+
+    
     
     private String name;
     private Integer employeeID;
     private Integer age;
     private Integer contactInfo;
     private String emailID;
-
-    public Employee(String name, Integer employeeID, Integer age, Integer contactInfo, String emailID) {
-        this.name = name;
-        this.employeeID = employeeID;
-        this.age = age;
-        this.contactInfo = contactInfo;
-        this.emailID = emailID;
-    }
+    private String gender;
+    private String startDate;
+    private String level;
+    private String teamInfo;
+    private String positionTitle;
+    private String photoPath;
 
     public Employee() {
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
     
+    
+        
     
 }

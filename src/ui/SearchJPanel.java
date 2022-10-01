@@ -4,7 +4,11 @@
  */
 package ui;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
 import model.Employee;
+import model.employeeHistory;
 
 /**
  *
@@ -12,14 +16,14 @@ import model.Employee;
  */
 public class SearchJPanel extends javax.swing.JPanel {
 
-    Employee employee;
+    employeeHistory history;
 
     /**
      * Creates new form SearchJPanel
      */
-    public SearchJPanel(Employee employee) {
+    public SearchJPanel(employeeHistory history) {
         initComponents();
-        this.employee = employee;
+        this.history = history;
     }
 
     /**
@@ -34,8 +38,10 @@ public class SearchJPanel extends javax.swing.JPanel {
         title = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jquery = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        searchTable = new javax.swing.JTable();
 
         setPreferredSize(new java.awt.Dimension(912, 463));
 
@@ -44,19 +50,45 @@ public class SearchJPanel extends javax.swing.JPanel {
         title.setText("Search Employee");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Employee ID", "Name", "Position Title", "Email address" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("Sort By:");
 
-        jTextField2.setText("search query");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jquery.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jqueryActionPerformed(evt);
             }
         });
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton1.setText("Search");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        searchTable.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        searchTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Name", "Employee ID", "Level", "Position Title", "Cell Number", "Email ID", "Start Date"
+            }
+        ));
+        searchTable.setColumnSelectionAllowed(true);
+        jScrollPane2.setViewportView(searchTable);
+        searchTable.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -72,10 +104,15 @@ public class SearchJPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jquery, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(37, 37, 37)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 837, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(38, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,22 +123,92 @@ public class SearchJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jquery, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
-                .addContainerGap(348, Short.MAX_VALUE))
+                .addContainerGap(355, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(163, 163, 163)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(110, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jqueryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jqueryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jqueryActionPerformed
+    
+    private int criteria = 0;
+    private String query = "";
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+        criteria = jComboBox1.getSelectedIndex();
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+    
+    private void populateTable(List<Employee> templist) {
+        
+        DefaultTableModel model = (DefaultTableModel) searchTable.getModel();
+        model.setRowCount(0);
+        
+        for(Employee emp:templist){
+            Object[] row = new Object[7];
+            row[0] = emp;
+            row[1] = emp.getEmployeeID();
+            row[2] = emp.getGender();
+            row[3] = emp.getPositionTitle();
+            row[4] = emp.getPhotoPath();
+            row[5] = emp.getEmailID();
+            row[6] = emp.getStartDate();
+
+//            add remaining params
+
+            model.addRow(row);
+        }
+                
+        
+    }
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        query = jquery.getText();
+        List<Employee> temp = new ArrayList();
+        
+        for (Employee emp:history.getHistory()){
+            switch (criteria) {
+                case 0 -> {
+                    if(String.valueOf(emp.getEmployeeID()).contains(query)){
+                        temp.add(emp);
+                    }
+                }
+                case 1 -> {
+                    if(String.valueOf(emp.getName()).contains(query)){
+                        temp.add(emp);
+                    }
+                }
+                case 2 -> {
+                    if(String.valueOf(emp.getPositionTitle()).contains(query)){
+                        temp.add(emp);
+                    }
+                }
+                case 3 -> {
+                    if(String.valueOf(emp.getEmailID()).contains(query)){
+                        temp.add(emp);
+                    }
+                }
+                default -> {
+                }
+            }
+        populateTable(temp);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField jquery;
+    private javax.swing.JTable searchTable;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }

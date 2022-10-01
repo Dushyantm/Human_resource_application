@@ -5,6 +5,7 @@
 package ui;
 
 import model.Employee;
+import model.employeeHistory;
 
 /**
  *
@@ -15,11 +16,11 @@ public class UpdateJPanel extends javax.swing.JPanel {
     /**
      * Creates new form UpdateJPanel
      */
-    Employee employee;
+    employeeHistory history;
     
-    public UpdateJPanel(Employee employee) {
+    public UpdateJPanel(employeeHistory history) {
         initComponents();
-        this.employee = employee;
+        this.history = history;
     }
 
     /**
