@@ -9,7 +9,10 @@ package ui;
 import java.awt.FlowLayout;
 import java.awt.Image;
 import java.io.File;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -492,31 +495,60 @@ public class CreateJPanel extends javax.swing.JPanel {
     private void saveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveBtnActionPerformed
         // TODO add your handling code here:
         String name = txtName.getText();
-        Integer employeeID = Integer.parseInt(txtEID.getText());
-        Integer age = Integer.parseInt(txtAge.getText());
-        Integer contactInfo = Integer.parseInt(String.valueOf(txtPhone.getText()));
-        String emailID= txtEmail.getText();
+        Integer employeeId;
+        if (txtEID.getText().equals("")){
+            employeeId = 0;
+        }
+        else {employeeId = Integer.valueOf(txtEID.getText());
+        }
+        
+        Integer age;
+        if((txtAge.getText().equals(""))){
+            age = 0;
+        }else {age = Integer.valueOf(txtAge.getText());}
+        
+        Integer contactInfo;
+        if(txtPhone.getText().equals("")){
+            contactInfo = 0;
+        }else{contactInfo = Integer.valueOf(txtPhone.getText());}
+        String emailId= txtEmail.getText();
         String positionTitle = txtPtitle.getText();
         String TeamInfo = txtTeamInfo.getText();
-        
+        String strDate = null;
+        if (jStartDate.getDate()==null){
+            String date = "01-Oct-2022";
+            java.util.Date date2 = null;
+            try {
+                date2 = new SimpleDateFormat("dd-MMM-yyyy").parse(date);
+            } catch (ParseException ex) {
+                Logger.getLogger(CreateJPanel.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            jStartDate.setDate(date2);
+        }else{
+            strDate = new SimpleDateFormat("dd-MMM-yyyy").format(jStartDate.getDate());
+        }
         
         Employee emp = new Employee();
         
         emp.setName(name);
-        emp.setEmployeeID(employeeID);
+        emp.setEmployeeId(employeeId);
         emp.setAge(age);
         emp.setContactInfo(contactInfo);
-        emp.setEmailID(emailID);
+        emp.setEmailId(emailId);
         emp.setGender(this.radioBtnClick);
         emp.setPositionTitle(positionTitle);
-        emp.setStartDate(new SimpleDateFormat("dd-MM-yyyy").format(this.jStartDate.getDate()));
+        
+        emp.setStartDate(strDate);
         emp.setPhotoPath(this.photoPath);
         emp.setTeamInfo(TeamInfo);
+        if (contactInfo ==0||emailId.isEmpty()|| strDate.isEmpty()|| positionTitle.isEmpty()||name.isEmpty() ||employeeId ==0 ||age==0){
+            JOptionPane.showMessageDialog(this, "enter all fields ");
+        }else{
+            history.addNewEmployee(emp);
+            JOptionPane.showMessageDialog(this, "New Employee Created");
+        }
         
-        history.addNewEmployee(emp);
         
-        
-        JOptionPane.showMessageDialog(this, "New Employee Created");
         
     }//GEN-LAST:event_saveBtnActionPerformed
 
@@ -546,7 +578,7 @@ public class CreateJPanel extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        JFileChooser file = new JFileChooser("C:\\Users\\dumma\\Pictures");
+        JFileChooser file = new JFileChooser("C:\\");
 //        file.setCurrentDirectory(new File(System.getProperty("C:\\Users\\dumma\\Pictures")));
         int result = file.showSaveDialog(null);
         if(result == JFileChooser.APPROVE_OPTION){
@@ -643,7 +675,7 @@ public class CreateJPanel extends javax.swing.JPanel {
 
     private void txtPtitleKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPtitleKeyReleased
         // TODO add your handling code here:
-        String EXPRESSION = "^[a-zA-z]{0,10}$";
+        String EXPRESSION = "^[a-zA-Z]{0,10}$";
         Pattern express = Pattern.compile(EXPRESSION);
         Matcher match = express.matcher(txtPtitle.getText());
         if(!match.matches()){

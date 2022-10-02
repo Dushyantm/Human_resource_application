@@ -18,11 +18,11 @@ public class Employee {
         this.name = name;
     }
 
-    public Integer getEmployeeID() {
+    public Integer getEmployeeId() {
         return employeeID;
     }
 
-    public void setEmployeeID(Integer employeeID) {
+    public void setEmployeeId(Integer employeeID) {
         this.employeeID = employeeID;
     }
 
@@ -42,12 +42,12 @@ public class Employee {
         this.contactInfo = contactInfo;
     }
 
-    public String getEmailID() {
-        return emailID;
+    public String getEmailId() {
+        return emailId;
     }
 
-    public void setEmailID(String emailID) {
-        this.emailID = emailID;
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
     }
 
     public String getGender() {
@@ -105,7 +105,7 @@ public class Employee {
     private Integer employeeID;
     private Integer age;
     private Integer contactInfo;
-    private String emailID;
+    private String emailId;
     private String gender;
     private String startDate;
     private String level;

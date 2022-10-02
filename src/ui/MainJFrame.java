@@ -23,20 +23,8 @@ public class MainJFrame extends javax.swing.JFrame {
     public MainJFrame() {
         initComponents();
         history = new employeeHistory();
-        Employee emp = new Employee();
         
-        emp.setName("dumma");
         
-        emp.setEmployeeID(12345);
-        emp.setAge(22);
-        emp.setContactInfo(213123133);
-        emp.setEmailID("dumm@gmail.com");
-        emp.setGender("Male");
-        emp.setPositionTitle("none");
-        emp.setStartDate("12/10/2020");
-        emp.setPhotoPath("C:\\Users\\dumma\\Pictures\\IMG_0401.JPG");
-        emp.setTeamInfo("none");
-        history.addNewEmployee(emp);
     }
 
     /**

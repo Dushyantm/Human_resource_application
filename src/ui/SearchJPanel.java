@@ -6,6 +6,7 @@ package ui;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.Employee;
 import model.employeeHistory;
@@ -160,11 +161,11 @@ public class SearchJPanel extends javax.swing.JPanel {
         for(Employee emp:templist){
             Object[] row = new Object[7];
             row[0] = emp;
-            row[1] = emp.getEmployeeID();
+            row[1] = emp.getEmployeeId();
             row[2] = emp.getGender();
             row[3] = emp.getPositionTitle();
             row[4] = emp.getPhotoPath();
-            row[5] = emp.getEmailID();
+            row[5] = emp.getEmailId();
             row[6] = emp.getStartDate();
 
 //            add remaining params
@@ -178,34 +179,41 @@ public class SearchJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         query = jquery.getText();
         List<Employee> temp = new ArrayList();
-        
-        for (Employee emp:history.getHistory()){
-            switch (criteria) {
-                case 0 -> {
-                    if(String.valueOf(emp.getEmployeeID()).contains(query)){
-                        temp.add(emp);
-                    }
-                }
-                case 1 -> {
-                    if(String.valueOf(emp.getName()).contains(query)){
-                        temp.add(emp);
-                    }
-                }
-                case 2 -> {
-                    if(String.valueOf(emp.getPositionTitle()).contains(query)){
-                        temp.add(emp);
-                    }
-                }
-                case 3 -> {
-                    if(String.valueOf(emp.getEmailID()).contains(query)){
-                        temp.add(emp);
-                    }
-                }
-                default -> {
-                }
-            }
-        populateTable(temp);
+        if(query.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Enter text to search");
         }
+        else{
+            
+
+            for (Employee emp:history.getHistory()){
+                switch (criteria) {
+                    case 0 -> {
+                        if(String.valueOf(emp.getEmployeeId()).contains(query)){
+                            temp.add(emp);
+                        }
+                    }
+                    case 1 -> {
+                        if(String.valueOf(emp.getName()).contains(query)){
+                            temp.add(emp);
+                        }
+                    }
+                    case 2 -> {
+                        if(String.valueOf(emp.getPositionTitle()).contains(query)){
+                            temp.add(emp);
+                        }
+                    }
+                    case 3 -> {
+                        if(String.valueOf(emp.getEmailId()).contains(query)){
+                            temp.add(emp);
+                        }
+                    }
+                    default -> {
+                    }
+                }
+            populateTable(temp);
+            }
+        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jqueryKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jqueryKeyReleased
