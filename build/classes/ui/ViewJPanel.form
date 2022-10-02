@@ -34,94 +34,91 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jScrollPane2" pref="837" max="32767" attributes="0"/>
                           <Component id="title" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                                                  <Component id="name" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                                  <Component id="txtName" min="-2" pref="252" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="emailID" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                                      <Component id="txtEID1" min="-2" pref="252" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="emailID1" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                                      <Component id="txtEID3" min="-2" pref="252" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                              <Component id="name" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                              <Component id="txtName" min="-2" pref="252" max="-2" attributes="0"/>
                                           </Group>
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                                              <Component id="age" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                                              <Component id="jSpinner1" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="employeeID2" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                                              <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="emailID" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                                  <Component id="txtEID1" min="-2" pref="252" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="emailID1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                                  <Component id="txtEID3" min="-2" pref="252" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
-                                      <Component id="name1" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                                          <Component id="age" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="txtAge" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                                          <Component id="employeeID2" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                          <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Component id="age1" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                                              <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                                              <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                                              <Component id="jRadioButton3" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="170" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="employeeID1" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                      <Component id="jDateChooser1" min="-2" pref="120" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                                      <Component id="employeeID" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="txtEID2" min="-2" pref="131" max="-2" attributes="0"/>
-                                                  </Group>
+                                  <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
+                                  <Component id="name1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="age1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                          <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
+                                          <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
+                                          <Component id="jRadioButton3" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="170" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="employeeID1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="jDateChooser1" min="-2" pref="120" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                                                  <Component id="employeeID" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="txtEID2" min="-2" pref="131" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="429" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="emailID3" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                      <Component id="txtEID5" min="-2" pref="252" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="emailID2" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                      <Component id="txtEID4" min="-2" pref="252" max="-2" attributes="0"/>
-                                                  </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="429" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="emailID3" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtEID5" min="-2" pref="252" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="emailID2" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="txtEID4" min="-2" pref="252" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="69" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -159,8 +156,10 @@
                       </Group>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="age" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jSpinner1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="age" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtAge" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <Component id="employeeID2" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jComboBox1" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -268,7 +267,7 @@
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="160" resizable="true">
                   <Title/>
                   <Editor/>
                   <Renderer/>
@@ -463,10 +462,11 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEID3ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JSpinner" name="jSpinner1">
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
+    <Component class="javax.swing.JTextField" name="txtAge">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAgeActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAgeKeyReleased"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

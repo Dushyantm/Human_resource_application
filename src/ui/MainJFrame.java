@@ -5,6 +5,7 @@
 package ui;
 
 
+import java.text.SimpleDateFormat;
 import model.Employee;
 import model.employeeHistory;
 
@@ -17,13 +18,25 @@ public class MainJFrame extends javax.swing.JFrame {
     /**
      * Creates new form mainJFrame
      */
-    
     employeeHistory history;  
     
     public MainJFrame() {
         initComponents();
         history = new employeeHistory();
+        Employee emp = new Employee();
         
+        emp.setName("dumma");
+        
+        emp.setEmployeeID(12345);
+        emp.setAge(22);
+        emp.setContactInfo(213123133);
+        emp.setEmailID("dumm@gmail.com");
+        emp.setGender("Male");
+        emp.setPositionTitle("none");
+        emp.setStartDate("12/10/2020");
+        emp.setPhotoPath("C:\\Users\\dumma\\Pictures\\IMG_0401.JPG");
+        emp.setTeamInfo("none");
+        history.addNewEmployee(emp);
     }
 
     /**
@@ -41,7 +54,6 @@ public class MainJFrame extends javax.swing.JFrame {
         btnView = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
-        btnDelete = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         displayArea = new javax.swing.JPanel();
 
@@ -84,14 +96,6 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        btnDelete.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnDelete.setText("Delete");
-        btnDelete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteActionPerformed(evt);
-            }
-        });
-
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Menu");
 
@@ -104,7 +108,6 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addGroup(navBarLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addGroup(navBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -127,9 +130,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(btnSearch)
                 .addGap(18, 18, 18)
                 .addComponent(btnUpdate)
-                .addGap(18, 18, 18)
-                .addComponent(btnDelete)
-                .addContainerGap(176, Short.MAX_VALUE))
+                .addContainerGap(221, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(navBar);
@@ -187,12 +188,6 @@ public class MainJFrame extends javax.swing.JFrame {
         splitPane.setRightComponent(updatePanel);
     }//GEN-LAST:event_btnUpdateActionPerformed
 
-    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-        // TODO add your handling code here:
-        DeleteJPanel deletePanel = new DeleteJPanel(history);
-        splitPane.setRightComponent(deletePanel);
-    }//GEN-LAST:event_btnDeleteActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -231,7 +226,6 @@ public class MainJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCreate;
-    private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JButton btnView;

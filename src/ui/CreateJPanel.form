@@ -22,105 +22,157 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="title" min="-2" pref="900" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="103" pref="103" max="-2" attributes="0"/>
-                          <Component id="name" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="txtName" min="-2" pref="252" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="emailID" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                  <Component id="txtEID1" min="-2" pref="252" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="emailID1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                  <Component id="txtPtitle" min="-2" pref="252" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="116" pref="116" max="-2" attributes="0"/>
-                      <Component id="age" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtAge" min="-2" pref="131" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                      <Component id="name1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="labelPhoto" min="-2" pref="97" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="txtEmailID" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtEmail" min="-2" pref="252" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="emailID3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtPhone" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace pref="66" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-              <Component id="jBtnPanel" min="-2" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="employeeID1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                      <Component id="jStartDate" min="-2" pref="120" max="-2" attributes="0"/>
+                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      <Component id="title" min="-2" pref="900" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="saveBtn" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="employeeID2" min="-2" max="-2" attributes="0"/>
+                              <Component id="level" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                              <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="79" pref="79" max="-2" attributes="0"/>
-                              <Component id="employeeID" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                              <Component id="txtTeamInfo" min="-2" pref="131" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="79" pref="79" max="-2" attributes="0"/>
+                                      <Component id="employeeID" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="labelLevel1" min="-2" pref="136" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="labelLevel" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="saveBtn" min="-2" pref="87" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="txtTeamInfo" min="-2" pref="131" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
+                                      <Component id="name" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                              <Component id="labelName" min="-2" pref="244" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="txtName" min="-2" pref="252" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                                              <Component id="name1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="Phone" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Component id="emailID" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="txtEID" pref="252" max="32767" attributes="0"/>
+                                                      <Group type="102" attributes="0">
+                                                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                                          <Component id="labelEID" max="32767" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                                  <Component id="employeeID1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="labelStartDate" min="-2" pref="252" max="-2" attributes="0"/>
+                                                      <Component id="jStartDate" min="-2" pref="120" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="1" attributes="0">
+                                                      <Component id="labelGender" alignment="1" min="-2" pref="252" max="-2" attributes="0"/>
+                                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                                                              <Component id="age" min="-2" max="-2" attributes="0"/>
+                                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                              <Component id="txtAge" min="-2" pref="38" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                                                              <Component id="labelAge" max="32767" attributes="0"/>
+                                                          </Group>
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Component id="emailID1" min="-2" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                                  <Group type="102" attributes="0">
+                                                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                                                      <Component id="labelPositionTitle" max="32767" attributes="0"/>
+                                                                  </Group>
+                                                                  <Component id="txtPtitle" min="-2" pref="252" max="-2" attributes="0"/>
+                                                              </Group>
+                                                          </Group>
+                                                      </Group>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
+                                                  <Component id="txtEmailID" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                                      <Component id="jBtnPanel" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="labelPhoto" min="-2" pref="97" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="labelEmail" min="-2" pref="248" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="txtEmail" min="-2" pref="248" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="labelPhone" alignment="1" min="-2" pref="248" max="-2" attributes="0"/>
+                                      <Component id="txtPhone" alignment="1" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
               </Group>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Component id="title" min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -131,69 +183,77 @@
                               <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="19" pref="19" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Component id="labelName" min="-2" pref="12" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="emailID" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtEID1" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtEID" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jBtnPanel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="txtEmailID" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="emailID3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtPhone" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="emailID1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtPtitle" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="age" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtAge" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="0" pref="56" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="labelEID" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="labelPhoto" min="-2" pref="97" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="emailID1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtPtitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEmailID" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="labelPositionTitle" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelEmail" alignment="1" min="-2" pref="16" max="-2" attributes="0"/>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="age" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtAge" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelAge" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtPhone" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Phone" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jBtnPanel" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelPhone" min="-2" pref="13" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+              <Component id="labelGender" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="employeeID1" min="-2" max="-2" attributes="0"/>
                   <Component id="jStartDate" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="labelStartDate" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                      <Component id="employeeID2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="level" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="employeeID" min="-2" max="-2" attributes="0"/>
                   <Component id="txtTeamInfo" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="saveBtn" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="47" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="labelLevel" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelLevel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="saveBtn" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -243,6 +303,7 @@
     <Component class="javax.swing.JTextField" name="txtName">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNameActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtNameKeyReleased"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="saveBtn">
@@ -256,9 +317,10 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveBtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtEID1">
+    <Component class="javax.swing.JTextField" name="txtEID">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEID1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEIDActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtEIDKeyReleased"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="employeeID1">
@@ -271,7 +333,7 @@
     </Component>
     <Component class="com.toedter.calendar.JDateChooser" name="jStartDate">
     </Component>
-    <Component class="javax.swing.JLabel" name="employeeID2">
+    <Component class="javax.swing.JLabel" name="level">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="0"/>
@@ -288,6 +350,9 @@
           <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;Level 1&quot;, &quot;Level 2&quot;, &quot;Level 3&quot;, &quot;Level 4&quot; })" type="code"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
@@ -300,6 +365,7 @@
     <Component class="javax.swing.JTextField" name="txtPtitle">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPtitleActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPtitleKeyReleased"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="emailID1">
@@ -340,54 +406,45 @@
     <Component class="javax.swing.JTextField" name="txtEmail">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEmailActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="emailID3">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Phone:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtPhone">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPhoneActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtEmailKeyReleased"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtAge">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAgeActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAgeKeyReleased"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="labelPhoto">
     </Component>
     <Container class="javax.swing.JPanel" name="jBtnPanel">
+      <Events>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jBtnPanelKeyReleased"/>
+      </Events>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                  <Component id="age1" min="-2" max="-2" attributes="0"/>
+                  <Component id="Gender" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   <Component id="jRadioBtnMale" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                   <Component id="jRadioBtnFemale" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                   <Component id="jRadioBtnOther" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jRadioBtnMale" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="age1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Gender" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jRadioBtnFemale" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioBtnOther" min="-2" max="-2" attributes="0"/>
@@ -430,7 +487,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioBtnOtherActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="age1">
+        <Component class="javax.swing.JLabel" name="Gender">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="0"/>
@@ -440,5 +497,60 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JLabel" name="Phone">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Phone:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtPhone">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPhoneActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPhoneKeyReleased"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelPhone">
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelEmail">
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelName">
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelEID">
+      <Properties>
+        <Property name="text" type="java.lang.String" value=" "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelPositionTitle">
+      <Properties>
+        <Property name="text" type="java.lang.String" value=" "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelAge">
+      <Properties>
+        <Property name="text" type="java.lang.String" value=" "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelGender">
+      <Properties>
+        <Property name="text" type="java.lang.String" value=" "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelStartDate">
+      <Properties>
+        <Property name="text" type="java.lang.String" value=" "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelLevel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value=" "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelLevel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value=" "/>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>

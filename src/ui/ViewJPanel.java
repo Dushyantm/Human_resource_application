@@ -64,7 +64,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         jComboBox1 = new javax.swing.JComboBox<>();
         txtEID2 = new javax.swing.JTextField();
         txtEID3 = new javax.swing.JTextField();
-        jSpinner1 = new javax.swing.JSpinner();
+        txtAge = new javax.swing.JTextField();
 
         setPreferredSize(new java.awt.Dimension(912, 463));
 
@@ -90,6 +90,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         tblView.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
         if (tblView.getColumnModel().getColumnCount() > 0) {
             tblView.getColumnModel().getColumn(0).setPreferredWidth(140);
+            tblView.getColumnModel().getColumn(5).setPreferredWidth(160);
         }
 
         btnView.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -189,6 +190,17 @@ public class ViewJPanel extends javax.swing.JPanel {
             }
         });
 
+        txtAge.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAgeActionPerformed(evt);
+            }
+        });
+        txtAge.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtAgeKeyReleased(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -205,71 +217,69 @@ public class ViewJPanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 837, Short.MAX_VALUE)
                             .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(42, 42, 42)
+                                                .addComponent(name)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addComponent(emailID)
+                                                    .addGap(18, 18, 18)
+                                                    .addComponent(txtEID1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addComponent(emailID1)
+                                                    .addGap(18, 18, 18)
+                                                    .addComponent(txtEID3, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(55, 55, 55)
+                                            .addComponent(age)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(77, 77, 77)
+                                            .addComponent(employeeID2)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGap(137, 137, 137)
+                                    .addComponent(name1))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(37, 37, 37)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(age1)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(jRadioButton1)
+                                            .addGap(12, 12, 12)
+                                            .addComponent(jRadioButton2)
+                                            .addGap(12, 12, 12)
+                                            .addComponent(jRadioButton3)
+                                            .addGap(170, 170, 170)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addComponent(employeeID1)
+                                                    .addGap(18, 18, 18)
+                                                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addGap(4, 4, 4)
+                                                    .addComponent(employeeID)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                    .addComponent(txtEID2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(429, 429, 429)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                 .addGroup(layout.createSequentialGroup()
-                                                    .addGap(42, 42, 42)
-                                                    .addComponent(name)
+                                                    .addComponent(emailID3)
                                                     .addGap(18, 18, 18)
-                                                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(emailID)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(txtEID1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(emailID1)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(txtEID3, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(55, 55, 55)
-                                                .addComponent(age)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(employeeID2)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(137, 137, 137)
-                                        .addComponent(name1))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(37, 37, 37)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(age1)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jRadioButton1)
-                                                .addGap(12, 12, 12)
-                                                .addComponent(jRadioButton2)
-                                                .addGap(12, 12, 12)
-                                                .addComponent(jRadioButton3)
-                                                .addGap(170, 170, 170)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(employeeID1)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addGap(4, 4, 4)
-                                                        .addComponent(employeeID)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                        .addComponent(txtEID2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(429, 429, 429)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(emailID3)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(txtEID5, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(emailID2)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(txtEID4, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))))
-                .addContainerGap(69, Short.MAX_VALUE))
+                                                    .addComponent(txtEID5, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addComponent(emailID2)
+                                                    .addGap(18, 18, 18)
+                                                    .addComponent(txtEID4, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))))))))))
+                .addGap(69, 69, 69))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -300,8 +310,9 @@ public class ViewJPanel extends javax.swing.JPanel {
                             .addComponent(txtEID3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(age)
-                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(age)
+                                .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(employeeID2)
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
@@ -386,6 +397,15 @@ public class ViewJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
+    private void txtAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAgeActionPerformed
+
+    private void txtAgeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAgeKeyReleased
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_txtAgeKeyReleased
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel age;
@@ -405,11 +425,11 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JScrollPane jScrollPane2;
-    public javax.swing.JSpinner jSpinner1;
     private javax.swing.JLabel name;
     private javax.swing.JLabel name1;
     private javax.swing.JTable tblView;
     private javax.swing.JLabel title;
+    private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtEID1;
     private javax.swing.JTextField txtEID2;
     private javax.swing.JTextField txtEID3;
@@ -429,7 +449,7 @@ public class ViewJPanel extends javax.swing.JPanel {
             row[1] = emp.getEmployeeID();
             row[2] = emp.getGender();
             row[3] = emp.getPositionTitle();
-            row[4] = emp.getPhotoPath();
+            row[4] = emp.getContactInfo();
             row[5] = emp.getEmailID();
             row[6] = emp.getStartDate();
 
