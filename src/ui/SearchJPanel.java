@@ -90,7 +90,7 @@ public class SearchJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Name", "Employee ID", "Level", "Position Title", "Cell Number", "Email ID", "Start Date"
+                "Name", "Employee ID", "Gender", "Position Title", "Cell Number", "Email ID", "Start Date"
             }
         ));
         searchTable.setColumnSelectionAllowed(true);
@@ -164,7 +164,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             row[1] = emp.getEmployeeId();
             row[2] = emp.getGender();
             row[3] = emp.getPositionTitle();
-            row[4] = emp.getPhotoPath();
+            row[4] = emp.getContactInfo();
             row[5] = emp.getEmailId();
             row[6] = emp.getStartDate();
 
@@ -180,7 +180,7 @@ public class SearchJPanel extends javax.swing.JPanel {
         query = jquery.getText();
         List<Employee> temp = new ArrayList();
         if(query.isEmpty()){
-            JOptionPane.showMessageDialog(this, "Enter text to search");
+            JOptionPane.showMessageDialog(this, "Please enter a query to search");
         }
         else{
             

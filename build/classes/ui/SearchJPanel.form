@@ -137,7 +137,7 @@
               <Table columnCount="7" rowCount="5">
                 <Column editable="true" title="Name" type="java.lang.Object"/>
                 <Column editable="true" title="Employee ID" type="java.lang.Object"/>
-                <Column editable="true" title="Level" type="java.lang.Object"/>
+                <Column editable="true" title="Gender" type="java.lang.Object"/>
                 <Column editable="true" title="Position Title" type="java.lang.Object"/>
                 <Column editable="true" title="Cell Number" type="java.lang.Object"/>
                 <Column editable="true" title="Email ID" type="java.lang.Object"/>

@@ -64,7 +64,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         employeeID1 = new javax.swing.JLabel();
         jStartDate = new com.toedter.calendar.JDateChooser();
         level = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        levelComboBox = new javax.swing.JComboBox<>();
         txtTeamInfo = new javax.swing.JTextField();
         txtPtitle = new javax.swing.JTextField();
         emailID1 = new javax.swing.JLabel();
@@ -146,11 +146,11 @@ public class CreateJPanel extends javax.swing.JPanel {
         level.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         level.setText("Level:");
 
-        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Level 1", "Level 2", "Level 3", "Level 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        levelComboBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        levelComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Level 1", "Level 2", "Level 3", "Level 4" }));
+        levelComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                levelComboBoxActionPerformed(evt);
             }
         });
 
@@ -313,7 +313,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(levelComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(79, 79, 79)
                                         .addComponent(employeeID))
                                     .addGroup(layout.createSequentialGroup()
@@ -361,7 +361,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                                                     .addGap(18, 18, 18)
                                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(labelStartDate, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(jStartDate, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                        .addComponent(jStartDate, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                                 .addGroup(layout.createSequentialGroup()
                                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                         .addComponent(labelGender, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -467,7 +467,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(level)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(levelComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(employeeID)
                     .addComponent(txtTeamInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -511,9 +511,11 @@ public class CreateJPanel extends javax.swing.JPanel {
         if(txtPhone.getText().equals("")){
             contactInfo = 0;
         }else{contactInfo = Integer.valueOf(txtPhone.getText());}
+        
         String emailId= txtEmail.getText();
         String positionTitle = txtPtitle.getText();
         String TeamInfo = txtTeamInfo.getText();
+        String selectedLevel = String.valueOf(levelComboBox.getSelectedItem());
         String strDate = null;
         if (jStartDate.getDate()==null){
             String date = "01-Oct-2022";
@@ -537,7 +539,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         emp.setEmailId(emailId);
         emp.setGender(this.radioBtnClick);
         emp.setPositionTitle(positionTitle);
-        
+        emp.setLevel(selectedLevel);
         emp.setStartDate(strDate);
         emp.setPhotoPath(this.photoPath);
         emp.setTeamInfo(TeamInfo);
@@ -622,11 +624,11 @@ public class CreateJPanel extends javax.swing.JPanel {
 
     private void txtPhoneKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPhoneKeyReleased
         // TODO add your handling code here:
-        String EXPRESSION = "^[0-9]{8,10}$";
+        String EXPRESSION = "^[0-9]{10}$";
         Pattern express = Pattern.compile(EXPRESSION);
         Matcher match = express.matcher(txtPhone.getText());
         if(!match.matches() ){
-            labelPhone.setText("Enter Phone number in correct format!");
+            labelPhone.setText("Enter a valid 10 digit phone number!");
         }
         else{
             labelPhone.setText(null);            
@@ -649,7 +651,7 @@ public class CreateJPanel extends javax.swing.JPanel {
 
     private void txtNameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyReleased
         // TODO add your handling code here:
-        String EXPRESSION = "^[a-zA-z]{0,20}$";
+        String EXPRESSION = "^[a-zA-Z]{2,20}$";
         Pattern express = Pattern.compile(EXPRESSION);
         Matcher match = express.matcher(txtName.getText());
         if(!match.matches()){
@@ -705,9 +707,9 @@ public class CreateJPanel extends javax.swing.JPanel {
     
     }//GEN-LAST:event_jBtnPanelKeyReleased
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void levelComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_levelComboBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_levelComboBoxActionPerformed
     private String radioBtnClick = "";
     private String photoPath = "";
 
@@ -721,7 +723,6 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel employeeID1;
     private javax.swing.JPanel jBtnPanel;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JRadioButton jRadioBtnFemale;
     private javax.swing.JRadioButton jRadioBtnMale;
     private javax.swing.JRadioButton jRadioBtnOther;
@@ -738,6 +739,7 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel labelPositionTitle;
     private javax.swing.JLabel labelStartDate;
     private javax.swing.JLabel level;
+    private javax.swing.JComboBox<String> levelComboBox;
     private javax.swing.JLabel name;
     private javax.swing.JLabel name1;
     private javax.swing.JButton saveBtn;
